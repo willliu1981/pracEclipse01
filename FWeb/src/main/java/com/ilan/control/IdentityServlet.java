@@ -39,12 +39,13 @@ public class IdentityServlet extends HttpServlet {
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
+		response.setContentType("image/jpeg");
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < 6; i++) {
 			sb.append(chars[rnd.nextInt(chars.length)]);
 		}
+
+		request.getSession(true).setAttribute("rndString", sb.toString());
 
 		int w = 100, h = 30;
 
