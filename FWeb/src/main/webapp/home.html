@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#identity").click(function() {
+			location.href="http://localhost:8088/FWeb/identity.jsp";
+
+		});
+
+	});
+</script>
+</head>
+<body>
+<h1>Hello World</h1>
+	<input type="button" id="identity" value="identity" /><br/>
+	<h2>
+	<form action="FServlet" method="get">
+	<input type="text" name="msg" value="test x     y" />
+	<input type="submit" value="send" />
+	</form>
+	
+	</h2>
+</body>
+</html>
