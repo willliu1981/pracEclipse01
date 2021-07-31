@@ -7,9 +7,20 @@
     <description>This is the description of my J2EE component</description>
     <servlet-class>com.ilan.control.IdentityServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>JudgeServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>JudgeServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>IdentityServlet</servlet-name>
     <url-pattern>/servlet/IdentityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JudgeServlet</servlet-name>
+    <url-pattern>/servlet/JudgeServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>
