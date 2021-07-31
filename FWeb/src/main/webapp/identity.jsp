@@ -7,12 +7,17 @@
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$("#change").click(function() {
-			$("#img").attr("src", "servlet/IdentityServlet?time="+new Date().getTime());
-
-		});
-	});
+	$(document).ready(
+			function() {
+				$("#change").click(
+						function() {
+							$("#change").attr("disabled",true);
+							$("#img").attr(
+									"src",
+									"servlet/IdentityServlet?time="
+											+ new Date().getTime());
+						});
+			});
 </script>
 </head>
 <body>

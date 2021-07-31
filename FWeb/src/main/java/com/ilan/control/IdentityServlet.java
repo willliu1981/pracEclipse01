@@ -65,7 +65,6 @@ public class IdentityServlet extends HttpServlet {
 		en.encode(bi);
 		out.flush();
 		out.close();
-		System.out.println("ss");
 	}
 
 }
