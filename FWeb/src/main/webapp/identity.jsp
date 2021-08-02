@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,14 +32,27 @@
 								.click(
 										function() {
 											location.href = "http://localhost:8088/FWeb/servlet/JudgeServlet?input="
-													+ $("#input").val() +"&CAPTCHA="+$("#CAPTCHA").val();
+													+ $("#input").val()
+													+ "&insertion="
+													+ $("#insertion").val()
+													+ "&CAPTCHA="
+													+ $("#CAPTCHA").val();
 										});
 					});
 </script>
 </head>
 <body>
+	input=${input}
+	<br /> ref=${header.referer}
+	<br />
+
+	<span>insertion= </span>
+	<input type="text" id="insertion"
+		value="<%=request.getParameter("insertion")%>" />
+	<br />
 	<span>n= </span>
-	<input type="text" id="input" />
+	<input type="text" id="input"
+		value="<%=request.getParameter("input")%>" />
 	<br />
 	<br />
 	<img src="servlet/IdentityServlet" id="img"

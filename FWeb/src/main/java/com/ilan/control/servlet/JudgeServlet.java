@@ -1,3 +1,5 @@
+package com.ilan.control.servlet;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -21,19 +23,17 @@ public class JudgeServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String CAPTCHA = request.getParameter("CAPTCHA");
 		String rndString = (String) request.getSession().getAttribute("rndString");
-
+		String insertion = request.getParameter("insertion");
+		String input = request.getParameter("input");
+		System.out.println("ref:" + request.getHeader("referer"));
+		System.out.println("p:" + input);
+		request.setAttribute("insertion", insertion);
+		request.setAttribute("input", input);
 		if (!CAPTCHA.equals(rndString)) {
 			request.getRequestDispatcher("../rndstringerror.jsp").forward(request, response);
-			return;
+		} else {
+			request.getRequestDispatcher("../judge.jsp").forward(request, response);
 		}
-
-
-		String insertion = "5";
-		String n = request.getParameter("input");
-		request.setAttribute("insertion", insertion);
-		request.setAttribute("input", n);
-
-		request.getRequestDispatcher("../judge.jsp").forward(request, response);
 
 	}
 

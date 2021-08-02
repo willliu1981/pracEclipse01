@@ -1,4 +1,4 @@
-package com.ilan.control;
+package com.ilan.control.servlet;
 
 import java.awt.Color;
 
