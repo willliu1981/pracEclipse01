@@ -67,7 +67,7 @@
 
 
 
-	root=${script}
+	script=${script}
 	<br />
 
 	<button type="button" onclick="test1();">test1</button>
