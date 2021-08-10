@@ -31,7 +31,8 @@
 	<h2>
 		<button type="button"
 			onclick="window.location.href='${parser.parsedURL}'">"retry"</button>
-		ref=<jsp:getProperty property="parsedURL" name="parser"/>
+		ref=<jsp:getProperty property="parsedURL" name="parser"/><br/>
+	
 
 	</h2>
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scripts>
+	<scriptCode name="javascript">
+		
+	<![CDATA[
+	if(a>b){
+		alert('a is bigger');
+	}else{
+		alert('b is bigger');
+	}
+	]]>
+
+	</scriptCode>
+
+</scripts>

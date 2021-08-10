@@ -1,26 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
-<web-app>
-  <servlet>
-    <servlet-name>IdentityServlet</servlet-name>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <description>This is the description of my J2EE component</description>
-    <servlet-class>com.ilan.control.servlet.IdentityServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>JudgeServlet</servlet-name>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <description>This is the description of my J2EE component</description>
-    <servlet-class>com.ilan.control.servlet.JudgeServlet</servlet-class>
-  </servlet>
 
-  <servlet-mapping>
-    <servlet-name>IdentityServlet</servlet-name>
-    <url-pattern>/servlet/IdentityServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>JudgeServlet</servlet-name>
-    <url-pattern>/servlet/JudgeServlet</url-pattern>
-  </servlet-mapping>
+
+<web-app>
+
+
+
+	<context-param>
+		<param-name>version</param-name>
+		<param-value>1.0</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>IdentityServlet</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.ilan.control.servlet.IdentityServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JudgeServlet</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.ilan.control.servlet.JudgeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdaimServlet</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.ilan.control.servlet.AdaimServlet</servlet-class>
+		<init-param>
+			<param-name>Kevin</param-name>
+			<param-value>kevin123</param-value>
+		</init-param>
+		<init-param>
+			<param-name>Admin</param-name>
+			<param-value>admin</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>NewsServlet</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.ilan.control.servlet.NewsServlet</servlet-class>
+
+
+
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>IdentityServlet</servlet-name>
+		<url-pattern>/servlet/IdentityServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JudgeServlet</servlet-name>
+		<url-pattern>/servlet/JudgeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdaimServlet</servlet-name>
+		<url-pattern>/servlet/AdaimServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewsServlet</servlet-name>
+		<url-pattern>/servlet/NewsServlet</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/notfound.jsp</location>
+	</error-page>
+
+
+<!-- 
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+		<taglib-location>/WEB-INF/tld/fmt.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+		<taglib-location>/WEB-INF/tld/c.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
+		<taglib-location>/WEB-INF/tld/sql.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
+		<taglib-location>/WEB-INF/tld/x.tld</taglib-location>
+	</taglib>
+	 -->
+	
+	
+
+	<env-entry>
+		<env-entry-name>news</env-entry-name>
+		<env-entry-value>today is fine</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+
 
 </web-app>
