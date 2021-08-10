@@ -74,6 +74,5 @@
 	<br />
 	<button type="button" onclick="test2();">test2</button>
 	<br />
-
 </body>
 </html>
